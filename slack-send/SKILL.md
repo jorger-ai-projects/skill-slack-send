@@ -78,10 +78,13 @@ Keep messages concise. Slack messages are best when scannable — prefer bullet 
 
 ### Step 3: Send it
 
-Run the bundled script, passing the channel/user ID and the formatted message:
+**IMPORTANT:** Always use the file-based method to send messages. Do NOT pass the message as an inline shell argument.
+
+1. Write the formatted mrkdwn message to `/tmp/slack_msg.txt` using the Write tool.
+2. Run the script with `--file`:
 
 ```bash
-node SKILL_DIR/scripts/send_message.mjs <CHANNEL_OR_USER_ID> "<mrkdwn formatted message>"
+node SKILL_DIR/scripts/send_message.mjs <CHANNEL_OR_USER_ID> --file /tmp/slack_msg.txt
 ```
 
 Replace `SKILL_DIR` with the absolute path to this skill's directory. The script:

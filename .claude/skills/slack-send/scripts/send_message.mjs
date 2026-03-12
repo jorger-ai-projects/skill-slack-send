@@ -3,7 +3,9 @@
 /**
  * Sends a message to a Slack channel or user via the Slack Web API.
  *
- * Usage: node send_message.mjs <channel_id> <message>
+ * Usage:
+ *   node send_message.mjs <channel_id> <message>
+ *   node send_message.mjs <channel_id> --file <path>   (reads message from file)
  *
  * Environment: SLACK_BOT_TOKEN must be set.
  *
@@ -11,10 +13,13 @@
  * and prints the Slack API response. On failure it exits 1 with an error message.
  */
 
+import { readFileSync } from "node:fs";
+
 const [channelId, ...messageParts] = process.argv.slice(2);
 
 if (!channelId || messageParts.length === 0) {
   console.error("Usage: node send_message.mjs <channel_id> <message>");
+  console.error("       node send_message.mjs <channel_id> --file <path>");
   process.exit(1);
 }
 
@@ -24,7 +29,12 @@ if (!token) {
   process.exit(1);
 }
 
-const message = messageParts.join(" ");
+let message;
+if (messageParts[0] === "--file" && messageParts[1]) {
+  message = readFileSync(messageParts[1], "utf8").trimEnd();
+} else {
+  message = messageParts.join(" ");
+}
 
 const body = JSON.stringify({
   channel: channelId,
