@@ -1,0 +1,134 @@
+{
+  "metadata": {
+    "skill_name": "slack-send",
+    "skill_path": "/Users/jorgeramirez/Technical/AI-Projects/ClaudeCode/Vicky-Slack-Skill/slack-send",
+    "executor_model": "claude-opus-4-6",
+    "analyzer_model": "claude-opus-4-6",
+    "timestamp": "2026-03-12T03:05:29Z",
+    "evals_run": ["standup-summary", "planning-action-items", "retro-agenda"],
+    "runs_per_configuration": 3
+  },
+  "runs": [
+    {
+      "eval_name": "standup-summary",
+      "configuration": "with_skill",
+      "pass_rate": 1.0,
+      "passed": 5,
+      "total": 5,
+      "tokens": 12025,
+      "duration_seconds": 23.8,
+      "expectations": [
+        { "text": "Uses *text* for bold/headers, not **text**", "passed": true, "evidence": "Uses *Standup Summary*, *Updates*, *Jorge* etc — single-asterisk bold" },
+        { "text": "Does not use # headings", "passed": true, "evidence": "No # headings" },
+        { "text": "Does not use [text](url) link syntax", "passed": true, "evidence": "No markdown links" },
+        { "text": "Targets channel C04ABC123", "passed": true, "evidence": "Command uses C04ABC123" },
+        { "text": "References Jorge, Maria, and Tomas", "passed": true, "evidence": "All three names in Updates section" }
+      ]
+    },
+    {
+      "eval_name": "standup-summary",
+      "configuration": "without_skill",
+      "pass_rate": 0.8,
+      "passed": 4,
+      "total": 5,
+      "tokens": 10744,
+      "duration_seconds": 24.8,
+      "expectations": [
+        { "text": "Uses *text* for bold/headers, not **text**", "passed": false, "evidence": "Uses **Jorge**, **Maria**, **Tomas** — double-asterisk (standard Markdown)" },
+        { "text": "Does not use # headings", "passed": true, "evidence": "No # headings" },
+        { "text": "Does not use [text](url) link syntax", "passed": true, "evidence": "No markdown links" },
+        { "text": "Targets channel C04ABC123", "passed": true, "evidence": "channel_id C04ABC123" },
+        { "text": "References Jorge, Maria, and Tomas", "passed": true, "evidence": "All three names present" }
+      ]
+    },
+    {
+      "eval_name": "planning-action-items",
+      "configuration": "with_skill",
+      "pass_rate": 0.833,
+      "passed": 5,
+      "total": 6,
+      "tokens": 11757,
+      "duration_seconds": 21.7,
+      "expectations": [
+        { "text": "Uses *text* for bold/headers, not **text**", "passed": true, "evidence": "Uses *Planning Meeting Action Items*, *Action Items*" },
+        { "text": "Does not use # headings", "passed": true, "evidence": "No # headings" },
+        { "text": "Does not use [text](url) link syntax", "passed": true, "evidence": "No markdown links" },
+        { "text": "Targets user UHRN3STK5 for DM", "passed": true, "evidence": "Command targets UHRN3STK5" },
+        { "text": "Uses <@UHRN3STK5> format for user mentions", "passed": false, "evidence": "References people by name, no <@> mentions. Prompt gave one ID for 3 people." },
+        { "text": "Shows tasks as incomplete with [ ] checkboxes", "passed": true, "evidence": "All items use - [ ] prefix" }
+      ]
+    },
+    {
+      "eval_name": "planning-action-items",
+      "configuration": "without_skill",
+      "pass_rate": 0.667,
+      "passed": 4,
+      "total": 6,
+      "tokens": 10270,
+      "duration_seconds": 17.6,
+      "expectations": [
+        { "text": "Uses *text* for bold/headers, not **text**", "passed": false, "evidence": "Uses **Action Items from Planning Meeting**, **Jorge** etc" },
+        { "text": "Does not use # headings", "passed": true, "evidence": "No # headings" },
+        { "text": "Does not use [text](url) link syntax", "passed": true, "evidence": "No markdown links" },
+        { "text": "Targets user UHRN3STK5 for DM", "passed": true, "evidence": "channel_id UHRN3STK5" },
+        { "text": "Uses <@UHRN3STK5> format for user mentions", "passed": false, "evidence": "No <@> mentions" },
+        { "text": "Shows tasks as incomplete with [ ] checkboxes", "passed": true, "evidence": "All items use - [ ] prefix" }
+      ]
+    },
+    {
+      "eval_name": "retro-agenda",
+      "configuration": "with_skill",
+      "pass_rate": 1.0,
+      "passed": 5,
+      "total": 5,
+      "tokens": 12262,
+      "duration_seconds": 27.3,
+      "expectations": [
+        { "text": "Uses *text* for bold/headers, not **text**", "passed": true, "evidence": "Uses *Retro Agenda*, *What Went Well* etc — single-asterisk" },
+        { "text": "Does not use # headings", "passed": true, "evidence": "No # headings" },
+        { "text": "Does not use [text](url) link syntax", "passed": true, "evidence": "No markdown links" },
+        { "text": "Targets channel C04ABC123", "passed": true, "evidence": "Command targets C04ABC123" },
+        { "text": "Has distinct sections for went well, didn't go well, and action items", "passed": true, "evidence": "Three clear sections with bold headers" }
+      ]
+    },
+    {
+      "eval_name": "retro-agenda",
+      "configuration": "without_skill",
+      "pass_rate": 0.8,
+      "passed": 4,
+      "total": 5,
+      "tokens": 10420,
+      "duration_seconds": 23.0,
+      "expectations": [
+        { "text": "Uses *text* for bold/headers, not **text**", "passed": false, "evidence": "command.txt uses **Retro Agenda**, **What Went Well** — double-asterisk in the actual command" },
+        { "text": "Does not use # headings", "passed": true, "evidence": "No # headings" },
+        { "text": "Does not use [text](url) link syntax", "passed": true, "evidence": "No markdown links" },
+        { "text": "Targets channel C04ABC123", "passed": true, "evidence": "channel_id C04ABC123" },
+        { "text": "Has distinct sections for went well, didn't go well, and action items", "passed": true, "evidence": "Three sections present" }
+      ]
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "mean_pass_rate": 0.944,
+      "mean_tokens": 12015,
+      "mean_duration_seconds": 24.3
+    },
+    "without_skill": {
+      "mean_pass_rate": 0.756,
+      "mean_tokens": 10478,
+      "mean_duration_seconds": 21.8
+    },
+    "delta": {
+      "pass_rate": "+0.188",
+      "time_seconds": "+2.5",
+      "tokens": "+1537"
+    }
+  },
+  "notes": [
+    "The uses-mrkdwn-bold assertion is the primary discriminator — passes 3/3 with skill and 0/3 without.",
+    "The uses-slack-user-mention assertion failed for both configs — test prompt gave 1 ID for 3 people, making it ambiguous.",
+    "Without-skill runs default to Slack MCP tool instead of direct API, confirming the skill redirects correctly.",
+    "Token overhead with skill is ~15% higher (~12K vs ~10.5K) — negligible for the formatting accuracy gained."
+  ]
+}

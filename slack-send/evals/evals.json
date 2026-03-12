@@ -1,0 +1,23 @@
+{
+  "skill_name": "slack-send",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Send a summary of today's standup to Slack channel C04ABC123. The team discussed: 1) Jorge finished the auth migration, 2) Maria is blocked on the API rate limiting issue and needs help from DevOps, 3) Tomas started the new onboarding flow wireframes. Use user ID UHRN3STK5 for any mentions.",
+      "expected_output": "A properly formatted Slack mrkdwn message sent via the send_message.mjs script to C04ABC123, with bold headers, bullet points, and correct mrkdwn syntax (not standard Markdown).",
+      "files": []
+    },
+    {
+      "id": 1,
+      "prompt": "DM user UHRN3STK5 with the action items from our planning meeting. The action items are: Jorge needs to write the API spec by Friday, Maria should set up the staging environment, and Tomas needs to create the design system tokens. Mark all as incomplete.",
+      "expected_output": "A properly formatted Slack mrkdwn message sent via the send_message.mjs script to UHRN3STK5, with action items using checkboxes, user mentions in <@UHRN3STK5> format, and correct mrkdwn syntax.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Post an agenda for tomorrow's retro in channel C04ABC123. Topics: what went well (auth migration shipped on time, zero downtime deploy), what didn't go well (CI pipeline was flaky all week, code review turnaround was slow), and action items to discuss (adopt trunk-based development, add CI cache warming).",
+      "expected_output": "A properly formatted Slack mrkdwn message sent via the send_message.mjs script to C04ABC123, with numbered or sectioned agenda using bold headers, bullet points, and correct mrkdwn syntax.",
+      "files": []
+    }
+  ]
+}

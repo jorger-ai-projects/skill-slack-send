@@ -1,0 +1,12 @@
+{
+  "eval_id": 0,
+  "eval_name": "standup-summary",
+  "prompt": "Send a summary of today's standup to Slack channel C04ABC123. The team discussed: 1) Jorge finished the auth migration, 2) Maria is blocked on the API rate limiting issue and needs help from DevOps, 3) Tomas started the new onboarding flow wireframes. Use user ID UHRN3STK5 for any mentions.",
+  "assertions": [
+    { "id": "uses-mrkdwn-bold", "text": "Uses *text* for bold/headers, not **text**", "type": "format" },
+    { "id": "no-markdown-headings", "text": "Does not use # headings (unsupported in Slack)", "type": "format" },
+    { "id": "no-markdown-links", "text": "Does not use [text](url) link syntax", "type": "format" },
+    { "id": "correct-channel-id", "text": "Targets channel C04ABC123", "type": "correctness" },
+    { "id": "mentions-all-three-people", "text": "References Jorge, Maria, and Tomas", "type": "completeness" }
+  ]
+}

@@ -1,0 +1,5 @@
+Tool: mcp__claude_ai_Slack__slack_send_message
+
+Parameters:
+  channel_id: "C04ABC123"
+  message: ":clipboard: **Daily Standup Summary — March 11, 2026**\n\nHere's what the team discussed today:\n\n:white_check_mark: **Jorge** — Finished the auth migration.\n:red_circle: **Maria** — Blocked on the API rate limiting issue. Needs help from DevOps.\n:pencil2: **Tomas** — Started the new onboarding flow wireframes.\n\n_Posted by <@UHRN3STK5>_"

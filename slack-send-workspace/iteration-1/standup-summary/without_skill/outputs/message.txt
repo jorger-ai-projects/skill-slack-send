@@ -1,0 +1,9 @@
+:clipboard: **Daily Standup Summary — March 11, 2026**
+
+Here's what the team discussed today:
+
+:white_check_mark: **Jorge** — Finished the auth migration.
+:red_circle: **Maria** — Blocked on the API rate limiting issue. Needs help from DevOps.
+:pencil2: **Tomas** — Started the new onboarding flow wireframes.
+
+_Posted by <@UHRN3STK5>_

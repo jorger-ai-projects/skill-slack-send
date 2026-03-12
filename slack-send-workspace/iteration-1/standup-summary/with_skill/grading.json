@@ -1,0 +1,12 @@
+{
+  "eval_id": 0,
+  "run_id": "standup-summary-with_skill",
+  "configuration": "with_skill",
+  "expectations": [
+    { "text": "Uses *text* for bold/headers, not **text**", "passed": true, "evidence": "Message uses *Standup Summary*, *Updates*, *Jorge*, *Maria*, *Tomas* — all single-asterisk bold" },
+    { "text": "Does not use # headings", "passed": true, "evidence": "No # headings found in the message" },
+    { "text": "Does not use [text](url) link syntax", "passed": true, "evidence": "No markdown links in the message" },
+    { "text": "Targets channel C04ABC123", "passed": true, "evidence": "Command uses C04ABC123 as first argument to send_message.mjs" },
+    { "text": "References Jorge, Maria, and Tomas", "passed": true, "evidence": "All three names appear in the Updates section" }
+  ]
+}

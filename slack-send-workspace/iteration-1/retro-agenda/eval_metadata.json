@@ -1,0 +1,12 @@
+{
+  "eval_id": 2,
+  "eval_name": "retro-agenda",
+  "prompt": "Post an agenda for tomorrow's retro in channel C04ABC123. Topics: what went well (auth migration shipped on time, zero downtime deploy), what didn't go well (CI pipeline was flaky all week, code review turnaround was slow), and action items to discuss (adopt trunk-based development, add CI cache warming).",
+  "assertions": [
+    { "id": "uses-mrkdwn-bold", "text": "Uses *text* for bold/headers, not **text**", "type": "format" },
+    { "id": "no-markdown-headings", "text": "Does not use # headings (unsupported in Slack)", "type": "format" },
+    { "id": "no-markdown-links", "text": "Does not use [text](url) link syntax", "type": "format" },
+    { "id": "correct-channel-id", "text": "Targets channel C04ABC123", "type": "correctness" },
+    { "id": "has-three-sections", "text": "Has distinct sections for went well, didn't go well, and action items", "type": "completeness" }
+  ]
+}

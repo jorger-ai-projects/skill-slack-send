@@ -1,0 +1,13 @@
+{
+  "eval_id": 1,
+  "eval_name": "planning-action-items",
+  "prompt": "DM user UHRN3STK5 with the action items from our planning meeting. The action items are: Jorge needs to write the API spec by Friday, Maria should set up the staging environment, and Tomas needs to create the design system tokens. Mark all as incomplete.",
+  "assertions": [
+    { "id": "uses-mrkdwn-bold", "text": "Uses *text* for bold/headers, not **text**", "type": "format" },
+    { "id": "no-markdown-headings", "text": "Does not use # headings (unsupported in Slack)", "type": "format" },
+    { "id": "no-markdown-links", "text": "Does not use [text](url) link syntax", "type": "format" },
+    { "id": "correct-user-id", "text": "Targets user UHRN3STK5 for DM", "type": "correctness" },
+    { "id": "uses-slack-user-mention", "text": "Uses <@UHRN3STK5> format for user mentions", "type": "format" },
+    { "id": "has-incomplete-checkboxes", "text": "Shows tasks as incomplete with [ ] or similar checkbox notation", "type": "completeness" }
+  ]
+}

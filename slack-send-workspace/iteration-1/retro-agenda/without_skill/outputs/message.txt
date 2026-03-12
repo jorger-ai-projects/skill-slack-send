@@ -1,0 +1,13 @@
+:clipboard: *Retro Agenda — March 12, 2026*
+
+:white_check_mark: *What Went Well*
+• Auth migration shipped on time
+• Zero downtime deploy
+
+:x: *What Didn't Go Well*
+• CI pipeline was flaky all week
+• Code review turnaround was slow
+
+:arrow_forward: *Action Items to Discuss*
+• Adopt trunk-based development
+• Add CI cache warming

@@ -1,0 +1,7 @@
+**Action Items from Planning Meeting**
+
+- [ ] **Jorge** - Write the API spec by Friday
+- [ ] **Maria** - Set up the staging environment
+- [ ] **Tomas** - Create the design system tokens
+
+Please update this thread as you complete your items!

@@ -1,0 +1,17 @@
+*Retro Agenda — March 12, 2026*
+
+Here's the agenda for tomorrow's retrospective.
+
+*What Went Well*
+- Auth migration shipped on time
+- Zero downtime deploy
+
+*What Didn't Go Well*
+- CI pipeline was flaky all week
+- Code review turnaround was slow
+
+*Action Items to Discuss*
+- [ ] Adopt trunk-based development
+- [ ] Add CI cache warming
+
+_Posted via automation_

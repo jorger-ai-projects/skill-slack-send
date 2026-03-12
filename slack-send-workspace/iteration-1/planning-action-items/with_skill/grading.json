@@ -1,0 +1,13 @@
+{
+  "eval_id": 1,
+  "run_id": "planning-action-items-with_skill",
+  "configuration": "with_skill",
+  "expectations": [
+    { "text": "Uses *text* for bold/headers, not **text**", "passed": true, "evidence": "Uses *Planning Meeting Action Items* and *Action Items* — single-asterisk bold" },
+    { "text": "Does not use # headings", "passed": true, "evidence": "No # headings" },
+    { "text": "Does not use [text](url) link syntax", "passed": true, "evidence": "No markdown links" },
+    { "text": "Targets user UHRN3STK5 for DM", "passed": true, "evidence": "Command targets UHRN3STK5 as first arg to send_message.mjs" },
+    { "text": "Uses <@UHRN3STK5> format for user mentions", "passed": false, "evidence": "Message references Jorge, Maria, Tomas by name only — no <@UHRN3STK5> mentions. Understandable since only one user ID was provided for three different people." },
+    { "text": "Shows tasks as incomplete with [ ] checkboxes", "passed": true, "evidence": "All three items use - [ ] prefix" }
+  ]
+}

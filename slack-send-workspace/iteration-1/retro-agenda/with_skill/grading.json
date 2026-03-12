@@ -1,0 +1,12 @@
+{
+  "eval_id": 2,
+  "run_id": "retro-agenda-with_skill",
+  "configuration": "with_skill",
+  "expectations": [
+    { "text": "Uses *text* for bold/headers, not **text**", "passed": true, "evidence": "Uses *Retro Agenda*, *What Went Well*, *What Didn't Go Well*, *Action Items to Discuss* — all single-asterisk" },
+    { "text": "Does not use # headings", "passed": true, "evidence": "No # headings" },
+    { "text": "Does not use [text](url) link syntax", "passed": true, "evidence": "No markdown links" },
+    { "text": "Targets channel C04ABC123", "passed": true, "evidence": "Command targets C04ABC123" },
+    { "text": "Has distinct sections for went well, didn't go well, and action items", "passed": true, "evidence": "Three clear sections: *What Went Well*, *What Didn't Go Well*, *Action Items to Discuss*" }
+  ]
+}

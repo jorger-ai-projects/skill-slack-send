@@ -1,0 +1,12 @@
+{
+  "eval_id": 0,
+  "run_id": "standup-summary-without_skill",
+  "configuration": "without_skill",
+  "expectations": [
+    { "text": "Uses *text* for bold/headers, not **text**", "passed": false, "evidence": "Message uses **Jorge**, **Maria**, **Tomas** — double-asterisk bold (standard Markdown, not Slack mrkdwn)" },
+    { "text": "Does not use # headings", "passed": true, "evidence": "No # headings found" },
+    { "text": "Does not use [text](url) link syntax", "passed": true, "evidence": "No markdown links" },
+    { "text": "Targets channel C04ABC123", "passed": true, "evidence": "channel_id set to C04ABC123 in MCP tool call" },
+    { "text": "References Jorge, Maria, and Tomas", "passed": true, "evidence": "All three names appear in the message" }
+  ]
+}

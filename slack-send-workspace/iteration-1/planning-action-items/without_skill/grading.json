@@ -1,0 +1,13 @@
+{
+  "eval_id": 1,
+  "run_id": "planning-action-items-without_skill",
+  "configuration": "without_skill",
+  "expectations": [
+    { "text": "Uses *text* for bold/headers, not **text**", "passed": false, "evidence": "Uses **Action Items from Planning Meeting** and **Jorge**, **Maria**, **Tomas** — double-asterisk bold" },
+    { "text": "Does not use # headings", "passed": true, "evidence": "No # headings" },
+    { "text": "Does not use [text](url) link syntax", "passed": true, "evidence": "No markdown links" },
+    { "text": "Targets user UHRN3STK5 for DM", "passed": true, "evidence": "channel_id set to UHRN3STK5" },
+    { "text": "Uses <@UHRN3STK5> format for user mentions", "passed": false, "evidence": "No <@> mentions used — names only" },
+    { "text": "Shows tasks as incomplete with [ ] checkboxes", "passed": true, "evidence": "All three items use - [ ] prefix" }
+  ]
+}

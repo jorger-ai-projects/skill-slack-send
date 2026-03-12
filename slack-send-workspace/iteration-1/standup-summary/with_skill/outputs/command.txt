@@ -1,0 +1,13 @@
+node /Users/jorgeramirez/Technical/AI-Projects/ClaudeCode/Vicky-Slack-Skill/slack-send/scripts/send_message.mjs C04ABC123 "*Standup Summary - March 11, 2026*
+
+Here's a recap of today's standup:
+
+*Updates*
+- *Jorge* finished the auth migration :white_check_mark:
+- *Maria* is blocked on the API rate limiting issue and needs help from DevOps :rotating_light:
+- *Tomas* started the new onboarding flow wireframes
+
+*Action Items*
+- [ ] DevOps team to assist <@UHRN3STK5> with the API rate limiting blocker
+
+_Posted via automation_"

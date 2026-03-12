@@ -1,0 +1,4 @@
+mcp__claude_ai_Slack__slack_send_message(
+  channel_id="UHRN3STK5",
+  message="**Action Items from Planning Meeting**\n\n- [ ] **Jorge** - Write the API spec by Friday\n- [ ] **Maria** - Set up the staging environment\n- [ ] **Tomas** - Create the design system tokens\n\nPlease update this thread as you complete your items!"
+)

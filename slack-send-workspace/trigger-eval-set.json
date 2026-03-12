@@ -1,0 +1,78 @@
+[
+  {
+    "query": "ok so I just finished writing up the meeting notes from this morning's architecture review. Can you send them to #backend-team (C04ABC123)? The main points were: we're moving to event-driven architecture for the notification service, Sarah is going to own the Kafka setup, and we need to deprecate the old webhook system by end of Q2",
+    "should_trigger": true
+  },
+  {
+    "query": "hey can you DM jorge (UHRN3STK5) on slack with the action items from our 1:1? he needs to finish the PR review for the auth refactor, update the runbook for the new deploy process, and schedule a knowledge transfer session with the new hire",
+    "should_trigger": true
+  },
+  {
+    "query": "I need to post a retro agenda in our team channel C07XYZ456. We should cover: what went well with the release, the on-call incidents from last week, and whether we want to change our sprint cadence from 2 weeks to 1 week",
+    "should_trigger": true
+  },
+  {
+    "query": "share this summary in slack channel C04ABC123 — we decided to go with Postgres over DynamoDB for the user preferences service because we need strong consistency and complex queries, the migration will start next sprint, and DevOps needs to provision the new RDS instance",
+    "should_trigger": true
+  },
+  {
+    "query": "let the team know on slack (C09QRS321) that the deploy is done and all health checks are passing. mention that the new caching layer reduced p99 latency from 800ms to 120ms",
+    "should_trigger": true
+  },
+  {
+    "query": "can you post a standup update for me in C04ABC123? yesterday I finished the GraphQL schema migration, today I'm working on the resolver tests, and I'm blocked on the staging env being down — need infra team to look at it",
+    "should_trigger": true
+  },
+  {
+    "query": "I want to send UHRN3STK5 a quick heads up on slack that the CI pipeline fix I pushed should resolve the flaky integration tests they've been seeing. Also mention that I added a retry mechanism for the database connection pool",
+    "should_trigger": true
+  },
+  {
+    "query": "draft a message for our #incidents channel (C02DEF789) about the outage we had today. Redis cluster lost a node around 2pm PST, affected the session store for about 12 minutes, we failed over manually, and the RCA is being written up by on-call",
+    "should_trigger": true
+  },
+  {
+    "query": "send a welcome message to the new engineer in our channel C04ABC123 — their name is Alex, they're joining the platform team, starting Monday, and their onboarding buddy is going to be Maria",
+    "should_trigger": true
+  },
+  {
+    "query": "I need to read the last 50 messages from #engineering channel to catch up on what I missed while I was on PTO. Can you pull those for me?",
+    "should_trigger": false
+  },
+  {
+    "query": "can you search our slack workspace for any messages mentioning 'database migration' from the last 2 weeks? I need to find a thread where someone posted the rollback steps",
+    "should_trigger": false
+  },
+  {
+    "query": "help me set up a new Slack app with the right OAuth scopes for our internal tooling. I need it to be able to read channels, post messages, and manage reactions. Walk me through the manifest.yaml",
+    "should_trigger": false
+  },
+  {
+    "query": "who posted in #deployments last Friday around 3pm? There was a message about rolling back the payment service and I need to figure out who initiated it",
+    "should_trigger": false
+  },
+  {
+    "query": "can you write me a Slack bot in Node.js that listens for slash commands and responds with formatted data from our internal API? It needs to handle /oncall, /status, and /incidents",
+    "should_trigger": false
+  },
+  {
+    "query": "I need to monitor our #alerts channel for any messages containing 'CRITICAL' and automatically create Jira tickets from them. Can you help me set up that automation?",
+    "should_trigger": false
+  },
+  {
+    "query": "can you check if user UHRN3STK5 is currently online on slack? I want to know if Jorge is available before I schedule a meeting",
+    "should_trigger": false
+  },
+  {
+    "query": "I want to create a recurring scheduled message that posts our team's KPIs dashboard link every Monday at 9am in #metrics. Can you set that up?",
+    "should_trigger": false
+  },
+  {
+    "query": "help me write a Python script that uses the Slack API to export all messages from a private channel into a CSV file. We need it for the compliance audit",
+    "should_trigger": false
+  },
+  {
+    "query": "can you react to the last message in #general with a :thumbsup: emoji? I want to acknowledge the announcement but I'm too lazy to open Slack",
+    "should_trigger": false
+  }
+]

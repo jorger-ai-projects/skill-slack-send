@@ -1,0 +1,10 @@
+*Planning Meeting Action Items*
+
+Here are the action items from our planning meeting:
+
+*Action Items*
+- [ ] Jorge: Write the API spec by Friday
+- [ ] Maria: Set up the staging environment
+- [ ] Tomas: Create the design system tokens
+
+_Please update when complete._

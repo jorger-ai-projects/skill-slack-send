@@ -1,0 +1,5 @@
+Tool: mcp__claude_ai_Slack__slack_send_message
+
+Parameters:
+  channel_id: "C04ABC123"
+  message: ":clipboard: **Retro Agenda — March 12, 2026**\n\n:white_check_mark: **What Went Well**\n• Auth migration shipped on time\n• Zero downtime deploy\n\n:x: **What Didn't Go Well**\n• CI pipeline was flaky all week\n• Code review turnaround was slow\n\n:arrow_forward: **Action Items to Discuss**\n• Adopt trunk-based development\n• Add CI cache warming"
