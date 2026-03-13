@@ -24,8 +24,8 @@ Download the latest `slack-send.skill` zip file from [Releases](https://github.c
 Extract the skill into your project's `.claude/skills/` directory:
 
 ```bash
-mkdir -p .claude/skills
-unzip slack-send.skill -d .claude/skills
+mkdir -p .claude/skills/slack-send
+unzip slack-send.skill -d .claude/skills/slack-send
 ```
 
 ### For all projects (global installation)
@@ -33,8 +33,8 @@ unzip slack-send.skill -d .claude/skills
 Extract the skill into your global Claude Code skills directory:
 
 ```bash
-mkdir -p ~/.claude/skills
-unzip slack-send.skill -d ~/.claude/skills
+mkdir -p ~/.claude/skills/slack-send
+unzip slack-send.skill -d ~/.claude/skills/slack-send
 ```
 
 ### Set the environment variable
