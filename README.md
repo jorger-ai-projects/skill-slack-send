@@ -17,22 +17,24 @@ A [Claude Code skill](https://docs.anthropic.com/en/docs/claude-code/skills) tha
 
 ## Installation
 
+Download the latest `slack-send.skill` zip file from [Releases](https://github.com/jorger-ai-projects/skill-slack-send/releases).
+
 ### For the current directory
 
-Copy the skill into your project's `.claude/skills/` directory:
+Extract the skill into your project's `.claude/skills/` directory:
 
 ```bash
 mkdir -p .claude/skills
-cp -r /path/to/Vicky-Slack-Skill/slack-send .claude/skills/slack-send
+unzip slack-send.skill -d .claude/skills
 ```
 
 ### For all projects (global installation)
 
-Copy the skill into your global Claude Code skills directory:
+Extract the skill into your global Claude Code skills directory:
 
 ```bash
 mkdir -p ~/.claude/skills
-cp -r /path/to/Vicky-Slack-Skill/slack-send ~/.claude/skills/slack-send
+unzip slack-send.skill -d ~/.claude/skills
 ```
 
 ### Set the environment variable
